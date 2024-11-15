@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+#button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+}
+
+#button:hover {
+  background-color: #07f9f1;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 300px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.hero-section {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(0, 12, 34);
+    height: 100vh;
+    width: 100%;
+}*/
+
+.navbar {
+    display: flex;
+    background-color: black;
+    padding: 15px 20px;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section-content {
+    margin-top: auto;
+    padding: 10px 20px;
+}
+
+.Logo {
+    width: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.menu-data {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    background-color: white;
+    color: rgb(0, 12, 34);
+}
+
+.size-icon {
+    font-size: 26px;
+}
+
+#Menu-bar {
+    display: none;
+    margin-left: auto;
+}
+
+#close {
+    display: none;
+}
+
+@media (max-width:761px) {
+    .menu-data {
+        position: absolute;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-end;
+        left: 100%;
+        top: 0;
+        transform: translate(-100%);
+        background-color: black;
+        width: 250px;
+        padding: 20px;
+        transition: display ease-in 5s;
+        z-index: -10;
+    }
+
+    #Menu-bar {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+}
+
+
+</style>
+<script>
+function validateForm() {
+  let x =document.forms["myForm"][" fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }let a = document.forms["myForm"][" email"].value;
+  if (a == "") {
+    alert("email must be filled out");
+    return false;
+  }
+  let b = document.forms["myForm"][" adr"].value;
+  if (b == "") {
+    alert("address must be filled out");
+    return false;
+  }
+  let c = document.forms["myForm"][" city"].value;
+  if (c == "") {
+    alert("city must be filled out");
+    return false;
+  }
+  let d = document.forms["myForm"][" state"].value;
+  if (d == "") {
+    alert("state must be filled out");
+    return false;
+  }
+  let e = document.forms["myForm"][" pincode"].value;
+  if (e == "") {
+    alert("pincode must be filled out");
+    return false;
+  }
+  let f = document.forms["myForm"][" cname"].value;
+  if (f == "") {
+    alert("card name must be filled out");
+    return false;
+  }
+  let g = document.forms["myForm"][" ccnum"].value;
+  if (g == "") {
+    alert("card number must be filled out");
+    return false;
+  }
+  let h = document.forms["myForm"][" expmonth"].value;
+  if (h == "") {
+    alert("expirymonth must be filled out");
+    return false;
+  }
+  let i = document.forms["myForm"][" expyear"].value;
+  if (i == "") {
+    alert("expiry year must be filled out");
+    return false;
+  }
+  let j = document.forms["myForm"][" ccv"].value;
+  if (j == "") {
+    alert("ccv must be filled out");
+    return false;
+  }
+  else{
+    alert("confirm");
+  }
+}
+function menubar() {
+var hihu = document.querySelector('.menu-data');
+var element = document.getElementById('Menu-bar');
+
+if (hihu) {
+hihu.classList.remove('animate__fadeOut');
+element.style.display = 'none';
+hihu.style.zIndex = '1';
+hihu.classList.add('animate__fadeIn');
+}
+}
+
+function closebar() {
+var hihu = document.querySelector('.menu-data');
+var element = document.getElementById('Menu-bar');
+if (hihu) {
+hihu.classList.remove('animate__fadeIn');
+hihu.style.zIndex = '-20';
+element.style.display = 'block';
+hihu.classList.add('animate__fadeOut');
+}
+}
+
+</script>
+</head>
+<body>
+
+
+
+  <section class="hero-section">
+    <nav class="navbar">
+        <div class="data-container">
+            <img src="logo2.jpg" class="Logo">
+            <div id="menu-time" class="menu-data animate__animated ">
+                <a onclick="closebar()"><i id="close" class="size fa-solid fa-xmark"></i></a>
+                <a href="d:\full stack java\project (full stack java)\project.html">Home</a>
+                <a href="d:\full stack java\project (full stack java)\project.html">Back</a>
+                <a href="d:\full stack java\project (full stack java)\admin.html">Admin</a>
+                <a href="d:\full stack java\project (full stack java)\conduct.html">Contact us</a>
+                <a href="d:\full stack java\project (full stack java)\register form.html">Register</a>
+            </div>
+            <a id="Menu-bar" onclick="menubar()"><i class="size-icon fa-solid fa-bars"></i></a>
+        </div>
+    </nav>
+    <div class="hero-section-content">
+
+    </div>
+</section>
+<script src="https://kit.fontawesome.com/7103fc097b.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+
+
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Sachin S">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="sachins@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="ERODE">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="TN">
+              </div>
+              <div class="col-50">
+                <label for="zip">pinCode</label>
+                <input type="text" id="pincode" name="pincode" placeholder="637209">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Sachin CardName">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="december">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2025">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <button type="submit"id="button"><a href="" onclick="return validateForm()">BUY NOW</a></button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

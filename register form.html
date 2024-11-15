@@ -1,0 +1,311 @@
+<html>
+  <head>
+    <title>register</title>
+<style> 
+
+body{
+    font-family: 'Lexend Exa', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  input {
+    font-family: 'Lexend Exa', sans-serif;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+    border: 2px solid #000000;
+    padding: 10px 40px 10px 40px;
+    margin: 5px;
+    color: black;
+    transition: 0.3s;
+  }
+  
+  input:hover {
+    border: 2px solid #ffffff;
+    color: white;
+  }
+  
+  input::placeholder {
+    color: black;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  button {
+    font-family: 'Lexend Exa', sans-serif;
+    margin-top: 40px;
+    transition: 0.3s;
+    border: 0px;
+    background-color: black;
+    border: 2px solid #000000;
+    width: 250px;
+    height: 50px;
+    color: white;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  a:hover {
+    color: black;
+    text-decoration: line-through;
+  }
+  
+  button:hover {
+    border: 2px solid #000000;
+    background-color: white;
+    color: black;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  .break {
+    margin: 10px;
+  }
+  
+  
+  /* Sweep To Right */
+  /* Effect made by IanLunn */
+  .hvr-sweep-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: white;
+  }
+  .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+ 
+  h1:hover{
+    color: rgb(120, 112, 238);
+  }
+  #ab{
+    width: 400px;
+    height: 450px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-left: 35%;
+
+  }
+  body{
+  
+    background-image: url('pexels-photo-8834493.webp');    
+  }
+
+
+
+
+
+
+
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.hero-section {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(0, 12, 34);
+    height: 100vh;
+    width: 100%;
+}*/
+
+.navbar {
+    display: flex;
+    background-color: black;
+    padding: 15px 20px;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section-content {
+    margin-top: auto;
+    padding: 10px 20px;
+}
+
+.Logo {
+    width: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.menu-data {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    background-color: white;
+    color: rgb(0, 12, 34);
+}
+
+.size-icon {
+    font-size: 26px;
+}
+
+#Menu-bar {
+    display: none;
+    margin-left: auto;
+}
+
+#close {
+    display: none;
+}
+
+@media (max-width:761px) {
+    .menu-data {
+        position: absolute;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-end;
+        left: 100%;
+        top: 0;
+        transform: translate(-100%);
+        background-color: black;
+        width: 250px;
+        padding: 20px;
+        transition: display ease-in 5s;
+        z-index: -10;
+    }
+
+    #Menu-bar {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+}
+  </style>
+
+<script>
+  function menubar() {
+var hihu = document.querySelector('.menu-data');
+var element = document.getElementById('Menu-bar');
+
+if (hihu) {
+hihu.classList.remove('animate__fadeOut');
+element.style.display = 'none';
+hihu.style.zIndex = '1';
+hihu.classList.add('animate__fadeIn');
+}
+}
+
+function closebar() {
+var hihu = document.querySelector('.menu-data');
+var element = document.getElementById('Menu-bar');
+if (hihu) {
+hihu.classList.remove('animate__fadeIn');
+hihu.style.zIndex = '-20';
+element.style.display = 'block';
+hihu.classList.add('animate__fadeOut');
+}
+}
+
+</script>
+  </head>
+
+
+    <body>
+
+      <section class="hero-section">
+        <nav class="navbar">
+            <div class="data-container">
+                <img src="logo2.jpg" class="Logo">
+                <div id="menu-time" class="menu-data animate__animated ">
+                    <a onclick="closebar()"><i id="close" class="size fa-solid fa-xmark"></i></a>
+                    <a href="d:\full stack java\project (full stack java)\project.html">Home</a>
+                    <a href="d:\full stack java\project (full stack java)\project.html">Back</a>
+                    <a href="d:\full stack java\project (full stack java)\admin.html">Admin</a>
+                    <a href="d:\full stack java\project (full stack java)\conduct.html">Contact us</a>
+                    <a href="d:\full stack java\project (full stack java)\register form.html">Register</a>
+                </div>
+                <a id="Menu-bar" onclick="menubar()"><i class="size-icon fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+        <div class="hero-section-content">
+    
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/7103fc097b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+
+
+
+
+
+<center><h1>YOUR REGISTRATION</h1></center>
+<div id="ab">
+<form action="register"method="post" class="mt-4">
+    <div class=" break hvr-sweep-to-right"><input type="text" placeholder="username" name="username"></div><br>
+    <div class="break hvr-sweep-to-right"><input type="text" placeholder="email" name="email"></div><br>
+    <div class="break hvr-sweep-to-right"><input type="password" placeholder="password" name="password"></div><br>
+    <div class="break hvr-sweep-to-right"><input type="text" placeholder="phone no" name="phoneno"></div><br>
+    <button type="submit">Register</button>
+    <!-- <p class="mt-5">Made by <a href="https://github.com/TRIPLICXTE">TRIPLICXTE</a><p> -->
+  </form>
+</div>
+    </body>
+</html>

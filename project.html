@@ -1,0 +1,395 @@
+<html>
+    <head>
+        <title>project</title>
+        <link rel="stylesheet"
+        href="http://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+        <style>
+
+#lovely{
+  width: 170px;
+  height: 80px;
+}
+
+.logo{
+    padding:20px 0;
+    margin:0 70px;
+}
+.menubar{
+    background-color:rgb(31, 31, 31);
+    text-align: center;
+    display:flex;
+    justify-content:start;
+}
+.menubar ul{
+    list-style:none;
+    display:inline-flex;
+}
+.menubar ul li{
+    width:100px;
+    margin:18px;
+    padding:10px;
+}
+.menubar ul li a{
+    text-decoration: none;
+    color:white;
+    font-size:medium;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode';
+}
+.menubar ul li:hover{
+  background-color:rgb(31, 31, 31);
+}
+.menubar ul li a:hover{
+    color:yellow;
+}
+.submenu1{
+    display:none;
+}
+.menubar ul li:hover .submenu1{
+    display:block;
+    position:absolute;
+    background-color:rgb(31, 31, 31);
+    margin-top:15px;
+    border-radius: 20px;
+}
+.menubar ul li:hover .submenu1 ul{
+    display:block;
+    margin:10px;
+}
+.submenu1 ul a:hover{
+    color:yellow;
+}
+
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            
+          }
+          
+          .dropdown-content a:hover {
+            background-color:rgb(255, 255, 255);
+          }
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+            .container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+img{
+  height: 40px;
+  width: 40px;
+}
+
+
+#feature{
+    padding:50px 70px;
+    display:flex;
+    justify-content: space-around;
+}
+#feature #pic
+{
+  height: 120px;
+  width: 200px;
+}
+#feature .box1{
+    border:1px solid rgba(0, 0, 0, 0.632);
+    border-radius: 10px;
+    width:230px;
+    height:fit-content;
+    text-align:center;
+    padding:20px 0;
+    font-family: Helvetica;
+    color:rgba(9, 60, 71, 0.902);
+}
+#feature .box2{
+    border:1px solid rgba(0, 0, 0, 0.632);
+    border-radius: 10px;
+    width:230px;
+    height:fit-content;
+    text-align:center;
+    padding:20px 0;
+    font-family: Helvetica;
+    color:rgba(9, 60, 71, 0.902);
+}
+#feature .box3{
+    border:1px solid rgba(0, 0, 0, 0.632);
+    border-radius: 10px;
+    width:230px;
+    height:fit-content;
+    text-align:center;
+    padding:20px 0;
+    font-family: Helvetica;
+    color:rgba(9, 60, 71, 0.902);
+}
+#feature .box4{
+    border:1px solid rgba(0, 0, 0, 0.632);
+    border-radius: 10px;
+    width:230px;
+    height:fit-content;
+    text-align:center;
+    padding:20px 0;
+    font-family: Helvetica;
+    color:rgba(9, 60, 71, 0.902);
+}
+
+
+</style>
+    
+
+    </head>
+     
+    <body>
+
+<div class="menubar">
+        <div class="logo">
+        <img src="lovely-shop-high-resolution-logo-transparent (1).png" id="lovely">
+        </div>
+        <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="user.html">Login</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="">Product</a>
+              <div class="submenu1">
+                <ul>
+                    <li><a href="cot shi.html">Shirts</a></li>
+                    <li><a href="cot pan.html">pants</a></li>
+                    <li><a href="formal shoes.html">formal shoes</a></li>
+                    <li><a href="sports shoes.html">Sport shoes</a></li>
+                    <li><a href="slippers.html">Slippers</a></li>
+                  </ul>
+            </div>
+            </li>
+            
+            <li><a href="#"><i class="material-symbols-outlined">local_mall</i></a></li>
+        </ul>
+    </div>
+
+
+          
+               <div class="container">
+                    <div class="box">
+                      <img src="pexels-photo-769731.jpeg">
+                      <span><a href="d:\full stack java\project (full stack java)\cot shi.html">SHIRTS</a></span>
+                    </div>
+                    <div class="box">
+                      <img src="jeans-pants-blue-shop-52518.jpeg">
+                      <span><a href="d:\full stack java\project (full stack java)\cot pan.html">PANTS</a></span>
+                    </div>
+                    <div class="box">
+                      <img src="pexels-photo-1476209.webp">
+                      <span><a href="d:\full stack java\project (full stack java)\formal shoes.html">FORMAL SHOES</a></span>
+                    </div>
+                    <div class="box">
+                      <img src="spot-runs-start-la.jpg">
+                      <span><a href="d:\full stack java\project (full stack java)\sports shoes.html">SPORTS SHOES</a></span>
+                    </div>
+                    <div class="box">
+                      <img src="pexels-photo-1756086.jpeg">
+                      <span><a href="d:\full stack java\project (full stack java)\slippers.html">SLIPPERS</a></span>
+                    </div>
+                  </div>
+
+                  <div id="feature">
+                    <div class="box1">
+                        <img src="feature 1.jpg" height="120px"width="200px" id="pic">
+                        <h3>Free shipping</h3>
+                    </div>
+                    <div class="box2">
+                        <img src="feature2.png" height="120px"width="200px" id="pic">
+                        <h3>Return available</h3>
+                    </div>
+                    <div class="box3">
+                        <img src="feature3.jpg"height="120px"width="200px" id="pic">
+                        <h3>Save money</h3>
+                    </div>
+                    <div class="box4">
+                        <img src="feature4.png"height="120px"width="200px" id="pic">
+                        <h3>24/7 support</h3>
+                    </div>
+                </div>
+               
+
+                  <style>
+                    /**********  Footer-Section CSS Code Starts  **********/
+                  .footer {
+                    background: #232f3e;
+                    padding: 30px 0px;
+                    width: 100%;
+                    height: 350px;
+                  }
+                  .quicklink-menu {
+                    list-style: none;
+                    padding-left: 20px;
+                  }
+                  .quicklink-menu li a {
+                    color: #fff;
+                    line-height: 3.5;
+                    margin-right: 180px;
+                    font-size: 15px;
+                    text-decoration: none;
+                    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
+                  }
+                  .social-media {
+                    list-style: none;
+                    margin-top: 10px;
+                  }
+                  .social-media li a img {
+                    width: 30px;
+                  }
+                  .social-media li {
+                    float: left;
+                    padding: 0px 8px;
+                  }
+                  .quicklink-heading{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #fff;
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    margin-bottom: 10px;
+                    
+                  }
+                  .get-in-touch {
+                    list-style: none;
+                    padding-left: 10px;
+                  }
+                  .get-in-touch li i {
+                    color: #ed372c;
+                    font-size: 20px;
+                  }
+                  .get-in-touch li {
+                    color: #fff;
+                    line-height: 3.5;
+                    font-size: 15px;
+                    text-decoration: none;
+                    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
+                  }
+                  .footer-e-mail {
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: #fff;
+                    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
+                    text-decoration: none;
+                  }
+                  .footer-website {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #fff;
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    text-decoration: none;
+                  }
+                  .footer2-bacbor {
+                    background: #232f3e;
+                    padding: 10px 0px;
+                    border-top: 1px solid #898989;
+                  }
+                  .footer2-content {
+                    font-size: 14px;
+                    color: #fff;
+                    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
+                    text-align: center;
+                  }
+                  /**********   Footer-Section CSS Code Ends  **********/
+                  
+                  </style>
+                  <div class="width-100 margin-top-50 footer">
+                    <div class="container">
+                      <div class="width-25">
+                        <h2 class="quicklink-heading">Account Detail</h2>
+                        <ul class="quicklink-menu">
+                          <li><a href="D:\full stack java\project (full stack java)\project.html">Home</a></li>
+                          <li><a href="D:\full stack java\project (full stack java)\about.html">About us</a></li>
+                          <li><a href="#">Search</a></li>
+                          <li><a href="#">Cart</a></li>
+                          <li><a href="#">Checkout</a></li>
+                        </ul>
+                      </div>
+                      <div class="width-25">
+                        <h2 class="quicklink-heading">Quick Link</h2>
+                        <ul class="quicklink-menu">
+                          <li><a href="#">My Profile</a></li>
+                          <li><a href="#">Change Password</a></li>
+                          <li><a href="#">Order History</a></li>
+                          <li><a href="#">My Whislist</a></li>
+                          <li><a href="#">My Cashback</a></li>
+                        </ul>
+                      </div>
+                      <div class="width-25">
+                        <h2 class="quicklink-heading">Quick Link</h2>
+                        <ul class="quicklink-menu">
+                          <li><a href="d:\full stack java\project (full stack java)\user.html">Login</a></li>
+                          <li><a href="#">Faq</a></li>
+                          <li><a href="d:\full stack java\project (full stack java)\conduct.html">Contact us</a></li>
+                          <li><a href="#">Download App</a></li>
+                          <li><a href="#">Refer & Earn Cashback</a></li>
+                        </ul>
+                      </div>
+                      <div class="width-25">
+                        <h2 class="quicklink-heading">GET IN TOUCH</h2>
+                        <ul class="get-in-touch">
+                          <li><i class="fa fa-envelope-o" aria-hidden="true"></i> E-MAIL:<a href="#" class="footer-e-mail"> sachins11204@gmail.com</a></li>
+                          <li><i class="fa fa-headphones" aria-hidden="true"></i> WHATS-APP: +91 79042-10748</li>
+                          <li><i class="fa fa-fax" aria-hidden="true"></i> CONTACT NO.: +91 81229-53876</li>
+                          <li><i class="fa fa-globe" aria-hidden="true"></i> WEBSITE:<a href="#" class="footer-website"> https://www.lovely shop.com</a></li>
+                        </ul>
+                        <ul class="social-media">
+                          <li><a href="#"><img src="d:\full stack java\project (full stack java)\download.png"></a></li>
+                          <li><a href="#"><img src="d:\full stack java\project (full stack java)\download (1).png"></a></li>
+                          <li><a href="#"><img src="d:\full stack java\project (full stack java)\download (2).png"></a></li>
+                          <li><a href="#"><img src="d:\full stack java\project (full stack java)\download (3).png"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!---------- Footer-Section HTML Code Ends --------->
+
+
+                 

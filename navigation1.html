@@ -1,0 +1,677 @@
+<html>
+    <head>
+        <title>navigation 1</title>
+
+        <style>
+
+            /* Importing fonts */
+          @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Work+Sans:wght@300;500&display=swap');
+          
+          /* Root variables for color */
+          :root {
+              --background: #131313;
+              --primary: #42ffc0;
+              --secondary: #19c96d;
+          }
+          
+          /* Resetting default styles */
+          body {
+              font-family: 'Work Sans', sans-serif;
+              margin: 0;
+              padding: 0;
+          }
+          
+          /* Hero banner styling */
+          .hero-banner {
+              color: #131313;
+              text-align: center;
+              padding: 50px 0;
+          }
+          
+          .preview-description .eyelid {
+              font-weight: 300;
+          }
+          
+          .preview-description h1 {
+              margin: 10px;
+              -webkit-text-fill-color: #42ffc0;
+              -webkit-text-stroke: 3px #42ffc0;
+              font-size: 55px;
+              font-family: 'Oxygen', sans-serif;
+              text-transform: uppercase;
+              letter-spacing: -4px;
+          }
+          
+          /* Head navigation styling */
+          h2 {
+              margin: 10px 0;
+          }
+          
+          #nav-menu {
+              background-color: var(--background);
+              color: white;
+              box-shadow: 0 5px 20px -17px rgba(0, 0, 0, 0.34);
+          }
+          
+          .container {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              max-width: 1600px;
+              margin: 0 auto;
+              column-gap: 2rem;
+              height: 30px;
+              padding: 1.2rem 3rem;
+          }
+          
+          /* Main navigation menu */
+          .menu {
+              position: relative;
+          }
+          
+          .nav-start,
+          .nav-end,
+          .menu-bar {
+              display: flex;
+              align-items: center;
+          }
+          
+          /* Dropdown menu styling */
+          .dropdown {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              min-width: 500px;
+              position: absolute;
+              top: 75px;
+              left: 50px;
+              z-index: 1;
+              visibility: hidden;
+              opacity: 0;
+              transform: scale(0.97) translateX(-5px);
+              transition: 0.1s ease-in-out;
+              border: 1px solid var(--background);
+              box-shadow: 0 5px 20px -17px rgba(0, 0, 0, 0.34);
+              color: black;
+          }
+          
+          /* Styling for dropdown lists */
+          .dropdown ul {
+              gap: 0.5rem;
+              padding: 1.2rem;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              width: 100%;
+          }
+          
+          .dropdown ul:first-child {
+              padding-bottom: 0;
+          }
+          
+          .dropdown ul:only-child {
+              padding-bottom: 20px !important;
+          }
+          
+          .dropdown ul > li[role] {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+          }
+          
+          .menu-heading {
+              font-size: 16px;
+              margin-bottom: 10px;
+              color: var(--secondary);
+              font-weight: 500;
+              letter-spacing: -0.6px;
+          }
+          
+          .menu-sub-link {
+              font-size: 13px;
+              margin-bottom: 5px;
+          }
+          
+          .menu-sub-link:hover {
+              color: var(--secondary);
+          }
+          
+          /* Styling for main menu links */
+          .menu-bar .nav-link {
+              font-size: 1rem;
+              font-weight: 500;
+              letter-spacing: -0.6px;
+              padding: 0.3rem;
+              min-width: 60px;
+              margin: 0 0.6rem;
+              font-family: 'Work Sans', sans-serif;
+          }
+          
+          /* Hover effect for main menu links */
+          .menu-bar .nav-link:hover {
+              color: var(--primary);
+          }
+          
+          /* Hamburger menu button styling */
+          .hidden {
+              display: none;
+          }
+          
+          ul {
+              list-style: none;
+          }
+          
+          a {
+              text-decoration: none;
+              color: inherit;
+          }
+          
+          button {
+              border: none;
+              background-color: transparent;
+              cursor: pointer;
+              color: inherit;
+          }
+          
+          .logo {
+              margin-right: 1.5rem;
+          }
+          
+          /* Active dropdown menu styling */
+          .dropdown.active {
+              visibility: visible;
+              opacity: 1;
+              transform: scale(1) translateX(5px);
+          }
+          
+          /* Styling for dropdown buttons */
+          .dropdown-btn {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 0.15rem;
+          }
+          
+          /* Hamburger menu button styling for smaller screens */
+          #hamburger {
+              display: none;
+              padding: 0.1rem;
+              margin-left: 1rem;
+              font-size: 1.9rem;
+          }
+          
+          /* Media query for smaller screens */
+          @media (max-width: 1100px) {
+              /* Show hamburger menu button */
+              #hamburger {
+                  display: block;
+              }
+          
+              /* Hide the main menu on smaller screens */
+              .menu {
+                  display: none;
+                  position: absolute;
+                  top: 64px;
+                  left: 0;
+                  min-height: calc(64px - 100vh);
+                  width: 100%;
+                  color: black;
+                  overflow-y: hidden;
+              }
+          
+              /* Display dropdown menus on smaller screens */
+              .dropdown {
+                  display: none;
+                  min-width: 100%;
+                  border: none !important;
+                  border-radius: 5px;
+                  position: static;
+                  top: 0;
+                  left: 0;
+                  visibility: visible;
+                  opacity: 1;
+                  transform: none;
+                  box-shadow: none;
+              }
+          
+              /* Show the main menu when active */
+              .menu.show,
+              .dropdown.active {
+                  display: block;
+              }
+          
+              /* Adjust container padding */
+              .container {
+                  padding: 1.2rem 1.3rem;
+              }
+          
+              /* Adjust main menu for smaller screens */
+              .menu-bar {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: stretch;
+                  row-gap: 1rem;
+                  padding: 1rem;
+              }
+          
+              .menu-bar .nav-link {
+                  display: flex;
+                  justify-content: space-between;
+                  width: 100%;
+                  font-weight: 600;
+                  font-size: 1.2rem;
+                  margin: 0;
+              }
+          
+              i.bx.bx-chevron-down {
+                  font-size: 1.5rem;
+              }
+          
+              .dropdown-btn {
+                  display: flex;
+                  justify-content: space-between;
+              }
+          }
+          
+          .footer {
+              position: fixed;
+              bottom: 10px;
+              right: 10px;
+              color: black;
+              font-size: 12px;
+              text-align: right;
+              font-family: monospace;
+          }
+          
+          .footer a {
+              color: black;
+              text-decoration: none;
+          }
+          </style>
+          <script>
+            // Select elements
+          const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+          const dropdowns = document.querySelectorAll(".dropdown");
+          const hamburgerBtn = document.getElementById("hamburger");
+          const navMenu = document.querySelector(".menu");
+          const hero = document.querySelector('.hero-banner');
+          const dropdownLinks = document.querySelectorAll(".dropdown a");
+          
+          // Function to set "aria-expanded" attribute to "false" for all dropdown buttons
+          function setAriaExpandedFalse() {
+              dropdownBtns.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+          }
+          
+          // Function to close all dropdown menus
+          function closeDropdownMenu() {
+              dropdowns.forEach((dropdown) => {
+                  dropdown.classList.remove("active");
+                  dropdown.addEventListener("click", (e) => e.stopPropagation());
+              });
+          }
+          
+          // Function to toggle the navigation menu and hero section
+          function toggleHamburger() {
+              navMenu.classList.toggle("show");
+              hero.classList.toggle("hidden");
+          }
+          
+          // Event listener for each dropdown button
+          dropdownBtns.forEach((btn) => {
+              btn.addEventListener("click", function (e) {
+                  const dropdownIndex = e.currentTarget.dataset.dropdown;
+                  const dropdownElement = document.getElementById(dropdownIndex);
+          
+                  dropdownElement.classList.toggle("active");
+          
+                  // Close other open dropdowns
+                  dropdowns.forEach((drop) => {
+                      if (drop.id !== btn.dataset["dropdown"]) {
+                          drop.classList.remove("active");
+                      }
+                  });
+          
+                  e.stopPropagation();
+          
+                  // Toggle the "aria-expanded" attribute
+                  btn.setAttribute(
+                      "aria-expanded",
+                      btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+                  );
+              });
+          });
+          
+          // Event listener for dropdown links to close the menu
+          dropdownLinks.forEach((link) =>
+              link.addEventListener("click", () => {
+                  closeDropdownMenu();
+                  setAriaExpandedFalse();
+                  toggleHamburger();
+              })
+          );
+          
+          // Event listener to close dropdown menu when clicking on the document body
+          document.documentElement.addEventListener("click", () => {
+              closeDropdownMenu();
+              setAriaExpandedFalse();
+          });
+          
+          // Event listener to close dropdown menu when the "Escape" key is pressed
+          document.addEventListener("keydown", (e) => {
+              if (e.key === "Escape") {
+                  closeDropdownMenu();
+                  setAriaExpandedFalse();
+              }
+          });
+          
+          // Event listener for the hamburger button
+          hamburgerBtn.addEventListener("click", toggleHamburger);
+          
+          </script>
+          
+          
+    </head>
+    <body>
+        <div class="hero-banner">
+            <div class="text-center preview-description">
+                <span class="eyelid">THIS WEEK`S COLLECTIONS</span><br/>
+                <h1>Lovely Shop</h1>
+            </div>
+        </div>
+        
+        <header id="nav-menu" aria-label="navigation bar">
+            <div class="container">
+                <div class="nav-start">
+                    <a class="logo" href="/">
+                        <h3><i><b>Lovely Shop</b></i></h3>
+                    </a>
+                </div>
+                <div class="nav-end">
+                    <nav class="menu">
+                        <ul class="menu-bar">
+                            <li>
+                                <a class="nav-link" href="d:\full stack java\project (full stack java)\project.html">Home</a>
+                            </li>
+                            <li><a class="nav-link" href="D:\full stack java\project (full stack java)\cot shi.html">back</a></li>
+                            <li><a class="nav-link" href="d:\full stack java\project (full stack java)\admin.html">admin</a></li>
+                            <li><a class="nav-link" href="d:\full stack java\project (full stack java)\conduct.html">Contact Us</a></li>
+                            <li><a class="nav-link" href="d:\full stack java\project (full stack java)\register form.html">register</a></li>
+                            <li><a class="nav-link" href="#saved">saved</a></li>
+                        </ul>
+                    </nav>
+                    <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-menu" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="footer">
+            Made with ❤️ by sachin | Visit <a href="https://lovelyshop.com" target="_blank">lovelyshop</a>
+        </div>
+
+
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 0px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+          </style>
+          <section></section>
+          
+          <footer class="footer-distributed">
+          
+                <div class="footer-left">
+          
+                  <h3>Lovely<span>Shop</span></h3>
+          
+                  <p class="footer-links">
+                    <a href="#" class="link-1">Home</a>
+                    
+                    <a href="#">Blog</a>
+                  
+                    <a href="#">Pricing</a>
+                  
+                    <a href="D:\full stack java\project (full stack java)\about.html">About</a>
+                    
+                    <a href="#">Faq</a>
+                    
+                    <a href="D:\full stack java\project (full stack java)\conduct.html">Contact</a>
+                  </p>
+          
+                  <p class="footer-company-name">Lovely Shopping © 2015</p>
+                </div>
+          
+                <div class="footer-center">
+          
+                  <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>S. SACHIN (CSE)</span>  No. 1, New Bangaru Naidu Colony,
+                      
+                      K.K. Nagar (West), Chennai - 600078.</p>
+                  </div>
+          
+                  <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+91 79042 10748</p>
+                  </div>
+          
+                  <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">sachins11204@gmail.com</a></p>
+                  </div>
+          
+                </div>
+          
+                <div class="footer-right">
+          
+                  <p class="footer-company-about">
+                    <span>About the shop</span>
+                    A clothes shop or clothes store is any shop which sells items of ready-made clothing.[1]: 59  A small shop which sells expensive or designer clothing may be called a boutique.
+                  </p>
+          
+                  <div class="footer-icons">
+          
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+          
+                  </div>
+
+    </body>
+</html>        

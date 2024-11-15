@@ -1,0 +1,791 @@
+<html>
+    <head>
+        <title>sports shoes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container .title{
+  color: #242424;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 73%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+  width: 250px;
+  height: 290px;
+}
+
+.content-image{
+    width: 200px;
+    height: 230px;
+    padding: 3px;
+    margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #ffffff;
+  font-weight: 500px;
+  letter-spacing: 0.10em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 1.15em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contain {
+  font-family: "Playfair Display";
+  margin-top: 120px; 
+}
+.menu3 li {
+  padding: 10px 40px;
+  color: #0f2027;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu3 li span {
+  z-index: 100;
+  color: #111;
+}
+
+.menu3 li::before,
+.menu3 li::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.menu3 li:before {
+  height: 50px;
+  width: 0;
+  right: 0;
+  border-top: 2px solid #fcbdbd;
+  border-bottom: 2px solid #f89797;
+  transition: all 500ms cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+.menu3 li:after {
+  background-color: rgb(255, 209, 209);
+  height: calc(50px - 4px);
+  width: 0;
+  left: 0;
+  transition: all 1s cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+/* On hover the 'before' and 'after' element's width is increased from zero to 100%, this caused the 'before' elements's top and bottom borders to increase the width from 0 to 100%, in 'after' element the increase  cause the background fill effect*/
+.menu3 li:hover:before {
+  width: 100%;
+}
+
+.menu3 li:hover:after {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* On hover the 'before' elements height get increased from 0 to 100% ans the span element's letter spacting increase from 1 to 4px */
+.menu4 li:hover:before {
+  background-color: transparent;
+  height: 100%;
+  transition: all 1s cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+.menu4 li:hover span {
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.hero-section {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(0, 12, 34);
+    height: 100vh;
+    width: 100%;
+}*/
+
+.navbar {
+    display: flex;
+    background-color: black;
+    padding: 15px 20px;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section-content {
+    margin-top: auto;
+    padding: 10px 20px;
+}
+
+.Logo {
+    width: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.menu-data {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    background-color: white;
+    color: rgb(0, 12, 34);
+}
+
+.size-icon {
+    font-size: 26px;
+}
+
+#Menu-bar {
+    display: none;
+    margin-left: auto;
+}
+
+#close {
+    display: none;
+}
+
+@media (max-width:761px) {
+    .menu-data {
+        position: absolute;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-end;
+        left: 100%;
+        top: 0;
+        transform: translate(-100%);
+        background-color: black;
+        width: 250px;
+        padding: 20px;
+        transition: display ease-in 5s;
+        z-index: -10;
+    }
+
+    #Menu-bar {
+        display: block;
+    }
+
+    #close {
+        display: block;
+    }
+
+}
+        </style>
+
+
+
+
+<script>
+  function menubar() {
+var hihu = document.querySelector('.menu-data');
+var element = document.getElementById('Menu-bar');
+
+if (hihu) {
+hihu.classList.remove('animate__fadeOut');
+element.style.display = 'none';
+hihu.style.zIndex = '1';
+hihu.classList.add('animate__fadeIn');
+}
+}
+
+function closebar() {
+var hihu = document.querySelector('.menu-data');
+var element = document.getElementById('Menu-bar');
+if (hihu) {
+hihu.classList.remove('animate__fadeIn');
+hihu.style.zIndex = '-20';
+element.style.display = 'block';
+hihu.classList.add('animate__fadeOut');
+}
+}
+
+</script>
+    </head>
+    <body>
+
+      <section class="hero-section">
+        <nav class="navbar">
+            <div class="data-container">
+                <img src="logo2.jpg" class="Logo">
+                <div id="menu-time" class="menu-data animate__animated ">
+                    <a onclick="closebar()"><i id="close" class="size fa-solid fa-xmark"></i></a>
+                    <a href="d:\full stack java\project (full stack java)\project.html">Home</a>
+                    <a href="d:\full stack java\project (full stack java)\project.html">Back</a>
+                    <a href="d:\full stack java\project (full stack java)\admin.html">Admin</a>
+                    <a href="d:\full stack java\project (full stack java)\conduct.html">Contact us</a>
+                    <a href="d:\full stack java\project (full stack java)\register form.html">Register</a>
+                </div>
+                <a id="Menu-bar" onclick="menubar()"><i class="size-icon fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+        <div class="hero-section-content">
+
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/7103fc097b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+      
+      <div class="contain">
+        <ul class="menu3">
+      <h1><li><u><i><b>SPORTS SHOES</b></i></u></li></h1> 
+        </ul>
+      </div>
+        <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo1.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="download (28).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                  <p>sports shoes</p>
+                </div>
+                <h3 class="title">ASIAN</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo2.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="download (29).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">DENSITY</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo3.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="download (30).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">BRIDE</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo4.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="download (31).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">BRUTON</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo5.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="download (32).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">ASIAN</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo6.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="images (29).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">TURKEY</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo7.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="images (30).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">AADI</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo8.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="images (31).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">REEBOK</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo9.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="images (32).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">WAAN</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo10.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="images (33).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">AADI</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo11.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="images (34).jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">ARISON</h3>
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="content">
+              <a href="d:\full stack java\project (full stack java)\spo12.html" target="_blank">
+                <div class="content-overlay"></div>
+                <img class="content-image" src="photo-1610969770059-7084269fa3be.jpg" alt="">
+                <div class="content-details fadeIn-bottom fadeIn-left">
+                    <p>sports shoes</p>
+                </div>
+                <h3 class="title">BROOKS</h3>
+              </a>
+            </div>
+          </div>
+          <style>
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 0px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+          </style>
+          <section></section>
+          
+          <footer class="footer-distributed">
+          
+            <div class="footer-left">
+      
+              <h3>Lovely<span>Shop</span></h3>
+      
+              <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+              
+                <a href="#">Pricing</a>
+              
+                <a href="D:\full stack java\project (full stack java)\about.html">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="D:\full stack java\project (full stack java)\conduct.html">Contact</a>
+              </p>
+      
+              <p class="footer-company-name">Lovely Shopping © 2015</p>
+            </div>
+      
+            <div class="footer-center">
+      
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>S. SACHIN (CSE)</span>  No. 1, New Bangaru Naidu Colony,
+                  
+                  K.K. Nagar (West), Chennai - 600078.</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 79042 10748</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">sachins11204@gmail.com</a></p>
+              </div>
+      
+            </div>
+      
+            <div class="footer-right">
+      
+              <p class="footer-company-about">
+                <span>About the shop</span>
+                A clothes shop or clothes store is any shop which sells items of ready-made clothing.[1]: 59  A small shop which sells expensive or designer clothing may be called a boutique.
+              </p>
+      
+              <div class="footer-icons">
+      
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+      
+              </div>
+      
+
+      
+</body>
+</html>

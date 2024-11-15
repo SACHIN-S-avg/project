@@ -1,0 +1,117 @@
+table{
+    width: 400px;
+    height: 1000px;
+    border-radius: 10px;
+    border: 2px solid black;
+    border-color: rgb(0, 0, 0);
+    margin-left: 290px;
+} 
+#a{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('download (14).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #b{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('download (23).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #c{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('download (26).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #d{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('download (27).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #e{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (21).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #f{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (22).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #g{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (23).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #h{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (24).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #i{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (25).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                    margin-left: 50px;
+                }
+                #j{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (26).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #k{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (27).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
+                #l{
+                    border: 2px solid;
+                    border-radius: 10px;
+                    width: 130px;
+                    height: 150px;
+                    background-image: url('images (28).jpg');
+                    background-repeat: no-repeat;
+                    padding: 30px;
+                }
